@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Gerard Tolentino</h1>
+    Age: 22<br>
+    Gender: Male<br>
+    Location: Pampanga Phillippines<br>
+    Course: Information Systems<br>
+    Year: 3rd Year<br>
+    Hobbies/Skills: Sports Games and building a Computers<br>
+    <br>
+    <a href = '/'>Go back to home page</a>
+</body>
+</html>
