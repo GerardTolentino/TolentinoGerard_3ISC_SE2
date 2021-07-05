@@ -11,7 +11,7 @@ const con = mysql2.createConnection({
     port: 3306,
     user: "Gerard Tolentino",
     password: "L09398875884jus",
-    database: "CovidDb"
+    database: "IICSDb"
   })
 
 //callback
@@ -25,19 +25,19 @@ con.connect((err) =>{
 
 //database
 app.get("/first", (req, res) => {
-    let sql = "CREATE DATABASE CovidDb";
+    let sql = "CREATE DATABASE IICSDb";
     con.query(sql, (err,result) => {
         if(!err){
             res.send("Successfully created database");
         }else{
-            res.send("failed to create school database....")
+            res.send("failed to create student database....")
         }
     })
 })
 
 //table 
 app.get("/second", (req, res) => {
-    let sql = "CREATE TABLE stat(Locationid int AUTO_INCREMENT, acases int, recovered int, deaths int, PRIMARY KEY(Locationid))";
+    let sql = "CREATE TABLE student(studID, fName, lName))";
     con.query(sql, (err,result) => {
         if(!err){
             res.send(result);
@@ -50,7 +50,7 @@ app.get("/second", (req, res) => {
 
 //create
 app.get("/third", (req, res) => {
-    let newRow = {Locationid: 24, acases: 23, recovered: 60, deaths: 2};
+    let newRow = {studID: 2018889305, fName: Gerard, lName: Tolentino};
     let sql = "INSERT INTO stat SET ?";
     con.query(sql, newRow, (err,result) => {
         if(!err){
